@@ -1,0 +1,65 @@
+@import "@/assets/scss/color.scss";
+
+.forms-container {
+  width: 90%;
+  display: flex;
+  position: relative;
+
+  form {
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+
+  h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 1.6em;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  .row {
+    display: flex;
+    width: 100%;
+
+    input {
+      border: none;
+      padding: 10px;
+      margin: 15px 15px 0 0;
+      font-size: 1em;
+      font-weight: 400;
+      width: 100%;
+    }
+
+    button {
+      border: none;
+      padding: 10px;
+      width: 100%;
+      margin: 15px 15px 0 0;
+      border-radius: 6px;
+      background: $light-orange;
+      color: $blue;
+      cursor: pointer;
+
+      &[type="submit"] {
+        background: $blue;
+        color: white;
+      }
+    }
+  }
+}
+
+.forms-enter-to,
+.forms-leave {
+  opacity: 1;
+}
+.forms-enter,
+.forms-leave-to {
+  opacity: 0;
+}
+.forms-leave-active {
+  transition: all 500ms;
+}
+.forms-enter-active {
+  transition: all 500ms 200ms;
+}

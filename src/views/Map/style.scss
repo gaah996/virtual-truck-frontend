@@ -1,0 +1,207 @@
+@import "@/assets/scss/color.scss";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  .search-box {
+    position: relative;
+    width: 100%;
+    form {
+      width: 100%;
+      input {
+        width: calc(100% - 50px);
+        border: none;
+        padding: 13px 50px 13px 13px;
+        font-size: 0.9em;
+        font-weight: 500;
+      }
+      img {
+        width: 25px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotateY(180deg);
+        right: -5px;
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .content {
+    width: 100vw;
+    height: calc(100vh - 60px);
+    display: flex;
+    position: absolute;
+
+    .lateral-menu {
+      min-width: 350px;
+      width: 350px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      height: calc(100vh - 100px);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 10;
+      padding: 20px 0;
+      overflow: auto;
+
+      h1 {
+        font-weight: 400;
+        font-size: 1.8em;
+      }
+
+      .address-card {
+        background: #f4f4f4;
+        padding: 5px;
+        width: 90%;
+        margin: 10px 0;
+        .card-title {
+          display: flex;
+          align-items: center;
+          font-size: 0.65em;
+
+          img {
+            width: 20px;
+            margin-right: 5px;
+            opacity: 0.3;
+          }
+          h2 {
+            font-weight: 400;
+            color: #333;
+          }
+        }
+        .card-content {
+          display: flex;
+          padding: 15px 0 10px 30px;
+
+          img {
+            width: 30px;
+            align-self: flex-start;
+            opacity: 0.8;
+            margin-right: 5px;
+          }
+
+          p {
+            font-size: 0.88em;
+          }
+        }
+      }
+      .info-card {
+        padding: 5px;
+        width: 90%;
+        margin: 10px 0;
+        .card-title {
+          display: flex;
+          align-items: center;
+          font-size: 0.65em;
+
+          img {
+            width: 20px;
+            margin-right: 5px;
+            opacity: 0.3;
+          }
+          h2 {
+            font-weight: 400;
+            color: #333;
+          }
+        }
+        .card-content {
+          padding: 0 20px 0 0;
+          input {
+            border: none;
+            width: calc(100% - 20px);
+            border-bottom: 1px solid #c4c4c4;
+            padding: 10px;
+            margin: 5px 0;
+            transition: all 100ms;
+            font-size: 0.9em;
+            &:focus {
+              border-bottom: 1px solid $blue;
+            }
+          }
+          .input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 0.9em;
+            margin: 5px 0;
+
+            h4 {
+              font-weight: 400;
+            }
+            p {
+              margin-left: 4px;
+
+              small {
+                color: grey;
+              }
+            }
+          }
+          textarea {
+            margin: 5px 0;
+            width: calc(100% - 20px);
+            padding: 10px;
+            resize: none;
+          }
+          .text {
+            display: flex;
+            margin: 10px 0 5px;
+            img {
+              width: 17px;
+              margin-right: 5px;
+              opacity: 0.9;
+            }
+            h3 {
+              font-weight: 400;
+              font-size: 0.95em;
+              color: #333;
+            }
+          }
+          span {
+            display: flex;
+            width: fit-content;
+            align-items: center;
+            font-size: 0.85em;
+            font-weight: 400;
+            white-space: nowrap;
+            input {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+      span {
+        display: flex;
+        justify-content: space-between;
+        width: calc(90% - 20px);
+        padding-right: 20px;
+        button {
+          background: $light-orange;
+          color: $blue;
+          cursor: pointer;
+          border: none;
+          border-radius: 6px;
+          padding: 10px;
+          font-weight: 500;
+          position: relative;
+
+          &:hover {
+            background: orange;
+            color: white;
+          }
+        }
+      }
+      .white-space {
+        padding: 10px;
+      }
+    }
+
+    .map {
+      width: 100%;
+      background: #eee;
+      position: relative;
+    }
+  }
+}

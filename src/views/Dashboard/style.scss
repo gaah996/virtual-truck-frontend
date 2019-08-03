@@ -1,0 +1,129 @@
+@import "@/assets/scss/color.scss";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  .content {
+    width: 100vw;
+    height: calc(100vh - 60px);
+    display: flex;
+    position: absolute;
+
+    .lateral-menu {
+      width: 350px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      height: calc(100vh - 60px);
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      ul {
+        transform: translateY(-40%);
+        width: 80%;
+        li {
+          padding: 20px 0;
+          font-size: 1.2em;
+          font-weight: 500;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          display: flex;
+          width: 100%;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          span {
+            display: flex;
+            cursor: pointer;
+            opacity: 0.2;
+            align-items: center;
+            transition: all 100ms;
+
+            &:hover {
+              opacity: 1;
+            }
+
+            img {
+              width: 25px;
+            }
+            p {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+
+      .logout {
+        position: absolute;
+        bottom: 0;
+        background: $blue;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        font-size: 1.2em;
+        font-weight: 500;
+        color: white;
+        cursor: pointer;
+        &:hover {
+          p {
+            margin-left: 15px;
+          }
+        }
+
+        img {
+          width: 25px;
+          margin-left: 30px;
+        }
+        p {
+          transition: all 200ms;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .map-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+
+    .text {
+      position: absolute;
+      width: fit-content;
+      white-space: nowrap;
+      background: rgba(0, 0, 0, 0.6);
+      right: 55px;
+      padding: 3px 5px;
+      color: white;
+      font-size: 0.9em;
+      border-radius: 2px;
+      display: none;
+    }
+
+    &:hover {
+      .text {
+        display: block;
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+
+    img {
+      width: 40px;
+    }
+  }
+}
